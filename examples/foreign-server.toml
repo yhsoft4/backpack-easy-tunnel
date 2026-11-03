@@ -1,0 +1,11 @@
+# /etc/backpack/bpt.toml on the FOREIGN (exit) server — what `bpt.sh install kharej` writes.
+[client]
+remote_addr = "IRAN_IP_OR_DOMAIN:7001"   # the Iran server's tunnel port
+transport = "tcp"
+token = "PUT_THE_SAME_64_HEX_TOKEN_HERE"
+nodelay = true
+keepalive_period = 20
+connection_pool = 8                 # parallel connections kept ready
+retry_interval = 3
+dial_timeout = 10
+log_level = "info"

@@ -1,0 +1,12 @@
+# /etc/backpack/bpt.toml on the IRAN (entry) server — what `bpt.sh install iran` writes.
+[server]
+bind_addr = "0.0.0.0:7001"          # tunnel port the foreign server dials
+transport = "tcp"
+token = "PUT_THE_SAME_64_HEX_TOKEN_HERE"
+# listen port on Iran = target as seen from the foreign server
+ports = ["80", "443=127.0.0.1:2096", "10000-10009"]
+accept_udp = true                   # also carry UDP
+nodelay = true
+keepalive_period = 20
+heartbeat = 10
+log_level = "info"
